@@ -10,7 +10,7 @@ https://github.com/mogwai/fastai_audio/blob/master/tutorials/03_Environmental_So
 
 ## Solution:
 
-First, I used the started notebook from the hosts to generate the 512x512 spectrograms. I didn't change any of the parameters here.
+First, I used the starter notebook from the hosts to generate the 512x512 spectrograms. I didn't change any of the parameters here.
 
 My solution uses the fastai library (https://docs.fast.ai/). After experimenting with resnet18, I used 3 other architectures: densenet161, densenet201, and resnet34. I used to transforms, but I did add mixup with only the default settings.
 
