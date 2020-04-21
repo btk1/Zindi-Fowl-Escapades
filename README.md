@@ -9,7 +9,12 @@ Mogwai's notebook for implementing mixup with fastai v1:
 https://github.com/mogwai/fastai_audio/blob/master/tutorials/03_Environmental_Sound_Classification.ipynb
 
 ## Solution:
-My solution uses the fastai library (https://docs.fast.ai/). I used 3 different architectures densenet161, densenet201, and resnet34. In each case, I used progressive resizing, starting my training with 224x224 images and then training on 512x512. Then, my final submission was a blend of 4 models (2 densenet161, 1 densenet 201 and 1 resnet34). 
+
+First, I used the started notebook from the hosts to generate the 512x512 spectrograms. I didn't change any of the parameters here.
+
+My solution uses the fastai library (https://docs.fast.ai/). After experimenting with resnet18, I used 3 other architectures: densenet161, densenet201, and resnet34. I used to transforms, but I did add mixup with only the default settings.
+
+With each model, I used progressive resizing, starting my training with 224x224 images and then training on 512x512. Then, my final submission was a blend of 4 models (2 densenet161, 1 densenet 201 and 1 resnet34). 
 
 The LBs for the individual models: 
 Densenet 161 - 1.155
