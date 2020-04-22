@@ -12,11 +12,11 @@ https://github.com/mogwai/fastai_audio/blob/master/tutorials/03_Environmental_So
 
 First, I used the starter notebook from the hosts to generate the 512x512 spectrograms without changing any parameters.
 
-My solution uses the fastai library (https://docs.fast.ai/). After experimenting with resnet18, I used 3 other architectures: **densenet161, densenet201, and resnet34**. 
+My solution uses the fastai library (https://docs.fast.ai/). After experimenting with resnet18, I used 3 other architectures: **densenet161**, **densenet201**, and **resnet34**. 
 
 I used **no transforms**, but I did add **mixup** to the learners with default settings.
 
-With each model, I used **progressive resizing**, starting my training with 224x224 images and then training on 512x512. 
+With each model, I used **progressive resizing**, starting the training with 224x224 images and then training on 512x512. 
 
 Then, my final submission was a **blend of 4 models** (2 densenet161 with different seeds, 1 densenet201 and 1 resnet34). 
 
