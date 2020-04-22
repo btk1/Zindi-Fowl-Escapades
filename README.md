@@ -12,15 +12,19 @@ https://github.com/mogwai/fastai_audio/blob/master/tutorials/03_Environmental_So
 
 First, I used the starter notebook from the hosts to generate the 512x512 spectrograms. I didn't change any of the parameters here.
 
-My solution uses the fastai library (https://docs.fast.ai/). After experimenting with resnet18, I used 3 other architectures: densenet161, densenet201, and resnet34. I used to transforms, but I did add mixup with only the default settings.
+My solution uses the fastai library (https://docs.fast.ai/). After experimenting with resnet18, I used 3 other architectures: **densenet161, densenet201, and resnet34**. 
 
-With each model, I used progressive resizing, starting my training with 224x224 images and then training on 512x512. Then, my final submission was a blend of 4 models (2 densenet161, 1 densenet 201 and 1 resnet34). 
+I used **no transforms**, but I did add **mixup** to the learners with default settings.
+
+With each model, I used **progressive resizing**, starting my training with 224x224 images and then training on 512x512. 
+
+Then, my final submission was a **blend of 4 models** (2 densenet161 with different seeds, 1 densenet201 and 1 resnet34). 
 
 The LBs for the individual models: 
-Densenet 161 - 1.155
-Densenet 161 - 1.237
-Densenet 201 - 1.46
-Resnet-34    - 1.255
+* Densenet 161 - 1.155
+* Densenet 161 - 1.237
+* Densenet 201 - 1.46
+* Resnet-34    - 1.255
 
 I had one submission left, and I decided to blend the four models .35, .2, .2, .25, respectively. To my surprise, it scored quite well @ 1.006.
 
@@ -28,7 +32,7 @@ Thank you to Zindi for hosting and everyone for their discussions. I hope that t
 
 ## To review for improving the models:
 
-I would like to have tried Kfold cross-validation of my models, but I did not have the time. I also think that adjusting the parameters to make the spectograms could possibly yield improved results. I would have liked to try fastai2 and some other variations on resnet architectures (xresnet, seresnet, etc) as well as the efficientnets. If I have time, I will add them to the github repository.
+I would like to have tried Kfold cross-validation of my models, but I did not have the time. I also think that adjusting the parameters to create the spectrograms could possibly yield improved results. I would have liked to try fastai v2 and some other variations on resnet architectures (xresnet, seresnet, etc) as well as the efficientnets. If I have time, I will add them to the github repository.
 
 I strongly recommend reviewing the solutions in this Kaggle competition:
 https://www.kaggle.com/c/freesound-audio-tagging-2019/discussion
